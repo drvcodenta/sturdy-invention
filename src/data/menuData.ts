@@ -1,5 +1,56 @@
 import type { MenuItem } from '../types/menu'
 
+const productServicesMenu: MenuItem[] = [
+  {
+    id: 'software-solutions',
+    title: 'Software Solutions',
+    description: 'Custom software development and deployment',
+    icon: 'products',
+  },
+  {
+    id: 'cloud-infrastructure',
+    title: 'Cloud & Infrastructure',
+    description: 'Scalable cloud solutions and infrastructure',
+    icon: 'industry',
+  },
+  {
+    id: 'consulting-services',
+    title: 'Consulting Services',
+    description: 'Expert guidance and strategic support',
+    icon: 'company',
+  },
+  {
+    id: 'digital-transformation',
+    title: 'Digital Transformation',
+    description: 'Comprehensive digital transformation strategies',
+    icon: 'research',
+  },
+  {
+    id: 'cybersecurity-consulting',
+    title: 'Cybersecurity Consulting',
+    description: 'Comprehensive cybersecurity services and solutions',
+    icon: 'support',
+  },
+  {
+    id: 'data-analytics',
+    title: 'Data & Analytics Consulting',
+    description: 'Data strategy, analytics, and business intelligence',
+    icon: 'resources',
+  },
+  {
+    id: 'devops-platform',
+    title: 'DevOps & Platform Engineering',
+    description: 'DevOps transformation and platform engineering',
+    icon: 'industry',
+  },
+  {
+    id: 'support-maintenance',
+    title: 'Support & Maintenance',
+    description: 'Ongoing maintenance and support services',
+    icon: 'support',
+  },
+]
+
 export const primaryMenu: MenuItem[] = [
   {
     id: 'home',
@@ -12,23 +63,7 @@ export const primaryMenu: MenuItem[] = [
     title: 'Products & Services',
     description: 'Explore our comprehensive offerings',
     icon: 'products',
-    children: [
-      {
-        id: 'digital-payments',
-        title: 'Digital Payments',
-        description: 'Unified payments experience across channels',
-      },
-      {
-        id: 'risk-management',
-        title: 'Risk Management',
-        description: 'Adaptive fraud and compliance controls',
-      },
-      {
-        id: 'developer-platform',
-        title: 'Developer Platform',
-        description: 'SDKs, APIs, and tools for rapid integration',
-      },
-    ],
+    children: productServicesMenu,
   },
   {
     id: 'industry-solutions',
