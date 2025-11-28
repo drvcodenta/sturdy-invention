@@ -229,7 +229,7 @@ function DrawerSurface({ items, onClose, className }: Omit<MenuDrawerProps, 'isO
                       <Icon className="h-5 w-5" strokeWidth={1.5} />
                     </span>
                     <span className="flex-1">
-                      <p className="text-sm font-semibold text-slate-900">{item.title}</p>
+                      <p className="text-sm text-slate-900">{item.title}</p>
                       {item.description && (
                         <p className="text-xs text-slate-500">{item.description}</p>
                       )}
