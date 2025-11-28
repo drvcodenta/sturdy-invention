@@ -230,6 +230,9 @@ function DrawerSurface({ items, onClose, className }: Omit<MenuDrawerProps, 'isO
                     </span>
                     <span className="flex-1">
                       <p className="text-sm font-semibold text-slate-900">{item.title}</p>
+                      {item.description && (
+                        <p className="text-xs text-slate-500">{item.description}</p>
+                      )}
                     </span>
                     {item.children && <ChevronRight className="h-5 w-5 text-slate-400" />}
                   </button>
