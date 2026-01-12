@@ -20,7 +20,9 @@ Framer Motion is a powerful animation library for React that provides:
 - **Location**: Background overlay behind the drawer
 - **Effect**: Smooth fade-in/fade-out of the semi-transparent black backdrop
 - **Implementation**: 
-  - Uses `overlayVariants` with opacity transitions (0 → 1)
+  - Uses `overlayVariants` with opacity transitions
+  - `hidden` state: `opacity: 0` (fully transparent)
+  - `visible` state: `opacity: 1` (fully opaque at 45% black)
   - Triggered when drawer opens/closes
   - Creates focus on the menu by dimming background
 
@@ -30,7 +32,7 @@ Framer Motion is a powerful animation library for React that provides:
 - **Implementation**:
   - `hidden`: Starts at `y: 90`, `opacity: 0`, `scale: 1`
   - `root`: Animates to `y: 0`, `scale: 1`, `opacity: 1` with spring physics
-  - `exit`: Returns to `y: 90`, `opacity: 0`
+  - `exit`: Returns to `y: 90`, `opacity: 0` (scale maintains previous value)
   - Uses **spring animation** with `damping: 24` and `stiffness: 320` for natural, bouncy feel
 
 ### 3. **Nested State Scale Animation**
@@ -113,11 +115,11 @@ transition: {
 
 ## Technical Stack
 
-- **Framer Motion**: v12.23.24
-- **React**: v19.2.0
-- **TypeScript**: For type-safe animation variants
-- **Tailwind CSS**: For styling
-- **Lucide React**: For icons
+- **Framer Motion**: ^12.23.24
+- **React**: ^19.2.0
+- **TypeScript**: ~5.9.3 (for type-safe animation variants)
+- **Tailwind CSS**: ^3.4.14 (for styling)
+- **Lucide React**: ^0.555.0 (for icons)
 
 ## Key Framer Motion Features Used
 
